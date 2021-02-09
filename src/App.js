@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import marked from 'marked';
 
-const markdownContentOnLoad =
+let markdownContentOnLoad =
 `# My markdown viewer
 ## Created by \`Sergei Elsakov\` with React
 \`\`\`
@@ -23,6 +23,7 @@ class App extends React.Component {
       preview: marked(markdownContentOnLoad),
     }
     this.handleChange = this.handleChange.bind(this)
+    this.Clear = this.Clear.bind(this)
   }
   handleChange(event) {
     this.setState({
@@ -30,15 +31,24 @@ class App extends React.Component {
       preview: marked(event.target.value),
     })
   }
+  Clear() {
+    this.setState({
+      editor: '',
+      preview: '',
+    })
+  }
 
   render() {
     return (
       <div className="App">
         <div className="editor">
-          <textarea id="editor" onChange={this.handleChange}>
-            {this.state.editor}
-          </textarea>
+          <div className="editor_title">
+            <h2>Editor</h2>
+            <button onClick={this.Clear}>Clear</button>
+          </div>
+          <textarea id="editor" onChange={this.handleChange} value={this.state.editor}></textarea>
         </div>
+        <h2>Previewer</h2>
         <div id="preview" className="preview_html" dangerouslySetInnerHTML={{ __html: this.state.preview }}></div>
       </div>
     )

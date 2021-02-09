@@ -60,3 +60,20 @@
 .preview_html code {
   background-color: #ece2e1;
 }
+
+.editor_title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 500px;
+  margin-left: 37%;
+}
+
+.editor_title button {
+  background-color: #aee1e1;
+  font-weight: 600;
+  width: 60px;
+  min-height: 30px;
+  margin-top: 5px;
+}
