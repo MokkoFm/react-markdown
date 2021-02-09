@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.editor textarea {
+  width: 500px;
+  min-height: 250px;
+  background-color: #fcd1d1;
+  padding: 10px;
+}
+
+.editor {
+  padding: 20px;
+}
+
+.preview_html {
+  width: 800px;
+  min-height: 250px;
+  background-color: #aee1e1;
+  padding: 10px;
+  text-align: left;
+  margin-left: 28%;
+}
+
+.preview_html code {
+  background-color: #ece2e1;
+}
