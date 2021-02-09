@@ -3,19 +3,17 @@ import React from 'react';
 import marked from 'marked';
 
 const markdownContentOnLoad =
-`# a header (H1 size)
-## a sub header (H2 size)
-https://www.linkedin.com/in/sergei-elsakov  
-\`inline code\`  
+`# My markdown viewer
+## Created by \`Sergei Elsakov\` with React
 \`\`\`
-You can write
-Some block of code here
-\`\`\`  
-* a list item  
-> a blockquote  
-an image ![Smile](https://i.pinimg.com/474x/3a/7c/20/3a7c201f1d37deb49412363d768bd865--emoji-faces-smiley-faces.jpg)  
+I did it with library Marked
+\`\`\`
+* I created editor
+* I created preview
+> You can add some fantastic quote here  
+![Smile](https://cdn.iconscout.com/icon/free/png-256/react-1543566-1306069.png)  
 
-**and bolded text.**`;
+**Thank you!**`;
 
 class App extends React.Component {
   constructor(props) {
